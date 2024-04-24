@@ -1,0 +1,16 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+<div class="row me-5 justify-content-center">
+    <div class="col-sm-6 mt-2 offset-2">
+     <h4 class="alert bg-primary text-center">Update Student Information</h4>
+     <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+      <input type="submit" class="btn btn-success" value="Update">
+      <a href="{% url 'AddSudent'%}" class="btn btn-info">Back to Home</a>
+     </form>
+    </div>
+   </div>
+{% endblock content %}
+
